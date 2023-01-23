@@ -525,7 +525,7 @@ img {
 .footer-mail:focus,
 .footer-tel:hover,
 .footer-tel:focus {
-  color: #2196f3;
+  color: var(--accent-blue-color);
 }
 
 .footer-item:not(:last-child) {
@@ -544,7 +544,7 @@ img {
 }
 .footer-soc-text {
   margin-bottom: 20px;
-  color: #ffffff;
+  color: var(--white-color);
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -558,7 +558,7 @@ img {
 }
 
 .footer-soc-icon {
-  fill: #ffffff;
+  fill: var(--white-color);
 }
 
 .footer-soc-link {
@@ -576,8 +576,8 @@ img {
 }
 .footer-soc-link:hover,
 .footer-soc-link:focus {
-  background-color: #2196f3;
-  fill: #ffffff;
+  background-color: var(--accent-blue-color);
+  fill: var(--white-color);
 }
 
 .footer-subscribe-wrap {
@@ -590,7 +590,7 @@ img {
   line-height: 1.14;
   text-transform: uppercase;
 
-  color: #ffffff;
+  color: var(--white-color);
 }
 
 .subscribe-form {
@@ -605,11 +605,20 @@ img {
 
   font-size: 16px;
   line-height: 1.25;
-  background-color: #2f303a;
-  color: #ffffff;
+  background-color: var(--secondary-black-background);
+  color: var(--white-color);
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
+}
+
+.subscribe-input::placeholder {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 /* .subscribe-form-wrap {
@@ -632,13 +641,13 @@ img {
   letter-spacing: 0.06em;
   cursor: pointer;
   background-color: #188ce8;
-  color: #ffffff;
+  color: var(--white-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .subscribe-icon {
   margin-left: 10px;
-  fill: #ffffff;
+  fill: var(--white-color);
 }
 
 /* ------------------------------------------------CSS for Portfolio------------------------------------
@@ -738,7 +747,7 @@ img {
   font-weight: 400;
   font-size: 18px;
   line-height: 1.56;
-  color: #ffffff;
+  color: var(--white-color);
   background-color: rgba(33, 150, 243, 0.9);
   transform: translateY(100%);
 
@@ -776,7 +785,7 @@ img {
   width: 528px;
   height: 581px;
 
-  background: #ffffff;
+  background: var(--white-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -796,20 +805,21 @@ img {
   align-items: center;
   width: 30px;
   height: 30px;
-  background: #ffffff;
+  background: var(--white-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   right: 8px;
   top: 8px;
   cursor: pointer;
 
-  transition-property: border, fill;
+  transition-property: fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-close:hover {
-  fill: #2196f3;
+.modal-close:hover,
+.modal-close:focus {
+  fill: var(--accent-blue-color);
 }
 
 .modal-icon {
@@ -824,16 +834,17 @@ img {
   line-height: 1.15;
   text-align: center;
 
-  color: #212121;
+  color: var(--primary-text-color);
 }
 
 .modal-input {
   display: block;
   margin-bottom: 10px;
-  padding-left: 32px;
+  padding-left: 42px;
   width: 448px;
   height: 40px;
 
+  cursor: pointer;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   outline: transparent;
@@ -843,11 +854,11 @@ img {
 }
 
 .modal-input:hover {
-  border-color: #2196f3;
+  border-color: var(--accent-blue-color);
 }
 
 .modal-input:hover + .modal-icons {
-  fill: #2196f3;
+  fill: var(--accent-blue-color);
 }
 
 .input-text {
@@ -859,7 +870,7 @@ img {
   line-height: 1.16;
   letter-spacing: 0.01em;
 
-  color: #757575;
+  color: var(--secondary-text-color);
 }
 
 .input-wrap {
@@ -877,10 +888,16 @@ img {
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 
+  cursor: pointer;
   outline: transparent;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   resize: none;
+}
+
+.input-message:hover,
+.input-message:focus {
+  border-color: var(--accent-blue-color);
 }
 
 .modal-icons {
@@ -904,7 +921,7 @@ img {
   margin-top: 20px;
   margin-bottom: 30px;
   line-height: 1.71;
-  color: #757575;
+  color: var(--secondary-text-color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -913,10 +930,9 @@ img {
 .privacy-text span {
   width: 16px;
   height: 15px;
-  border: 2px solid #212121;
+  border: 2px solid var(--primary-text-color);
   border-radius: 2px;
   margin-right: 5px;
-  margin-left: 31px;
   display: flex;
   justify-items: center;
   align-items: center;
@@ -924,13 +940,13 @@ img {
 }
 
 .modal-check:checked + .privacy-text span {
-  background-color: #2196f3;
+  background-color: var(--accent-blue-color);
   border: none;
-  fill: #ffffff;
+  fill: var(--white-color);
 }
 
 .check-link {
-  color: #2196f3;
+  color: var(--accent-blue-color);
   margin-left: 3px;
 }
 
@@ -966,10 +982,15 @@ img {
   letter-spacing: 0.06em;
   cursor: pointer;
   background-color: var(--accent-blue-color);
-  color: #ffffff;
+  color: var(--white-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  transition-property: background-color, color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-button:hover {
+.modal-button:hover,
+.modal-button:focus {
   background-color: #188ce8;
 }
